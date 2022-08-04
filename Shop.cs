@@ -34,6 +34,10 @@ namespace MultiShop
                 itemNames = Enum.GetNames(typeof(Electronics)).ToList();
             }
 
+            AddItemsToItemList(itemNames);
+        }
+        private void AddItemsToItemList(List<string> itemNames)
+        {
             int i = 1;
             foreach (var item in itemNames)
             {
@@ -45,7 +49,6 @@ namespace MultiShop
                 i++;
             }
         }
-
         public void PrintItems()
         {
             foreach (var item in Items)
